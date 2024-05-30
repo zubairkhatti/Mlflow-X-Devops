@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment Details</title>
+
+    <style>
+        /* Custom styles for navbar */
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            margin: 0;
+            padding: 10px 20px; /* Adjust padding for consistent size */
+        }
+
+        .navbar a {
+            float: left;
+            color: #f2f2f2;
+            text-decoration: none;
+            padding: 14px 16px;
+            font-size: 17px;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Custom styles for cards */
+        .container {
+            padding-top: 20px;
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        .card-header {
+            padding: 12px 20px;
+            background-color: #333;
+            color: #fff;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-text em {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Upload</a>
+        <a href="/model">Model Info</a>
+    </div>
+    <div class="container">
+        <h1 class="mt-5 mb-4">Experiment Details</h1>
+
+        <div class="card mb-4">
+            <div class="card-header">
+                Last Successful Run Details
+            </div>
+            <div class="card-body">
+                <p class="card-text">Run ID: {{ data.last_successful_run_id }}</p>
+                <p class="card-text">Run Name: {{ data.last_successful_run_name }}</p>
+                <p class="card-text">Start Time: {{ data.last_successful_run_start_time }}</p>
+                <p class="card-text">End Time: {{ data.last_successful_run_end_time }}</p>
+                <p class="card-text">Duration: {{ data.last_successful_run_duration }}</p>
+                <p class="card-text">Status: {{ data.last_successful_run_status }}</p>
+                <p class="card-text">Lifecycle Stage: {{ data.last_successful_run_lifecycle_stage }}</p>
+                <p class="card-text">User ID: {{ data.last_successful_run_user_id }}</p>
+                <p class="card-text">Artifact URI: {{ data.last_successful_run_artifact }}</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
